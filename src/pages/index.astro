@@ -3,9 +3,59 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Matias Lago Evia's site">
-  <main>
-    <h1>Welcome!</h1>
-    <p class="font-bold">This is some example content to be filled.</p>
-		<a href="/colors">Color Palette</a>
+	<!-- header w/ nav bar and everything for SPA -->
+	<header class="bg-black text-white">
+		<div class="content">
+			<p>Some header here</p>
+		</div>
+	</header>
+  <main class="flex flex-col">
+		<section class="min-h-screen">
+			<div class="content">
+				<h1>Welcome!</h1>
+				<p>Introduction and quick bullet point summary, picture?</p>
+			</div>
+		</section>
+		<section class="min-h-screen">
+			<div class="content">
+				<h2>Career highlights</h2>
+				<p>work, academic experience, certifications, etc.</p>
+			</div>
+		</section>
+		<section class="min-h-screen">
+			<div class="content">
+				<h2>Project highlights</h2>
+				<p>projects</p>
+			</div>
+		</section>
+		<section class="min-h-screen">
+			<div class="content">
+				<h2>Site directory</h2>
+				<p>projects</p>
+			</div>
+		</section>
+		<section class="min-h-screen">
+			<div class="content">
+				<h2>End of the line</h2>
+				<p>Send off and contact information</p>
+			</div>
+		</section>
   </main>
 </Layout>
+
+<style>
+  main > section:nth-child(even) {
+    background-color: black;
+    color: white;
+  }
+
+  main > section:nth-child(odd) {
+    background-color: white;
+    color: black;
+  }
+
+	.content {
+    margin: 0 auto;
+    width: 80%;
+  }
+</style>
