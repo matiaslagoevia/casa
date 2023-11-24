@@ -3,61 +3,52 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Matias Lago Evia's site">
-	<!-- header w/ nav bar and everything for SPA -->
-	<header class="bg-black text-white">
-		<div class="content">
-			<p>Some header here</p>
-		</div>
-	</header>
-  <main class="flex flex-col">
-		<section class="min-h-screen">
-			<div class="content">
-				<h1>Welcome!</h1>
-				<p>Introduction and quick bullet point summary, picture?</p>
-			</div>
-		</section>
-		<section class="min-h-screen">
-			<div class="content">
-				<h2>Career highlights</h2>
-				<p>work, academic experience, certifications, etc.</p>
-			</div>
-		</section>
-		<section class="min-h-screen">
-			<div class="content">
-				<h2>Project highlights</h2>
-				<p>projects</p>
-			</div>
-		</section>
-		<section class="min-h-screen">
-			<div class="content">
-				<h2>Site directory</h2>
-				<p>projects</p>
-			</div>
-		</section>
-		<section class="min-h-screen">
-			<div class="content">
-				<h2>End of the line</h2>
-				<p>Send off and contact information</p>
-			</div>
-		</section>
+  <main class="container text-center">
+    <div class="intro mb-10">
+      <h1 class="text-2xl font-bold">
+        I'm <a
+          href="https://www.linkedin.com/in/matias-engineer/"
+          class="text-turquoise-blue underline">Matias Lago Evia</a
+        >, nice to meet you! 👋
+      </h1>
+      <h2 class="text-xl">
+        I'm a professional software developer based in Manhattan.
+      </h2>
+    </div>
+    <div class="career mb-5">
+      <h2 class="text-xl">My career (summarized) so far...</h2>
+      <p>I am grateful to work doing what I love for a living!</p>
+      <ul class="list-disc list-inside mt-1">
+        <li>
+          At <a href="https://amazon.com" class="text-coral-orange">Amazon</a>,
+          I specialized in FC associates' authentication and authorization use
+          cases.
+        </li>
+        <li>
+          At <a href="https://solosegment.com" class="text-coral-orange"
+            >SoloSegment</a
+          >, I led the revamp and documentation effort for the data pipeline.
+        </li>
+        <li>
+          At <a href="https://blakfx.com" class="text-coral-orange">BlakFX</a>,
+          I helped to develop the Helix cryptographic library and associated
+          components.
+        </li>
+        <li>
+          At <a href="https://honors.njit.edu/" class="text-hot-pink"
+            >NJIT's ADHC</a
+          >, I received my B.S. in Computer Science.
+        </li>
+        <li>
+          At <a href="https://www.ccm.edu/" class="text-hot-pink">CCM</a>, I
+          received my A.S. in Mathematics and my A.A.S. in Game Development.
+        </li>
+      </ul>
+    </div>
   </main>
 </Layout>
-
 <style>
-  main > section:nth-child(even) {
-    background-color: black;
-    color: white;
-  }
-
-  main > section:nth-child(odd) {
-    background-color: white;
-    color: black;
-  }
-
-	.content {
-    margin: 0 auto;
-    width: 80%;
-		max-width: 1400px;
-		padding: 1em 0;
+  a {
+    font-weight: 900;
   }
 </style>

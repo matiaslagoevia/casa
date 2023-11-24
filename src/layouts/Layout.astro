@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import "../reset.css";
+import "../style.css";
 ---
 
 <!doctype html>
@@ -18,12 +19,20 @@ import "../reset.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="flex flex-col justify-between">
+    <header class="bg-black text-white">
+      <div class="container">
+        <p class="text-xl font-black text-mint-green">mle.</p>
+      </div>
+    </header>
     <slot />
+    <footer class="container text-center">
+      <p>
+        <a
+          href="https://linktr.ee/matiaslagoevia"
+          class="text-lavender font-black">Find me online!</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
-<style>
-  html {
-    font-family: sans-serif;
-  }
-</style>

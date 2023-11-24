@@ -1,0 +1,13 @@
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1400px;
+}
+
+a:hover {
+  opacity: 0.75;
+}
