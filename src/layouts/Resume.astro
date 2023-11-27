@@ -1,0 +1,96 @@
+---
+interface Props {
+  cv: number | null;
+  skills: string[] | null;
+}
+
+const { cv, skills } = Astro.props;
+
+import Skills from "../components/Skills.astro";
+import "../reset.css";
+import "../style.css";
+
+const allSkills = [
+  "AWS CDK",
+  "AWS CloudFormation",
+  "AWS CloudWatch",
+  "AWS EC2",
+  "AWS ECS",
+  "AWS Glue",
+  "AWS IAM",
+  "AWS KMS",
+  "AWS Lambda",
+  "AWS S3",
+  "AWS Secrets Manager",
+  "AWS SNS",
+  "AWS SQS",
+  "AWS WAF",
+  "Apache Airflow",
+  "BDD",
+  "C",
+  "C++",
+  "CSS",
+  "Cucumber",
+  "Docker",
+  "Elasticsearch",
+  "Figma",
+  "Google Cloud Platform",
+  "HTML",
+  "Java",
+  "Javascript",
+  "JUnit",
+  "Jupyter Notebook",
+  "Mockito",
+  "NextJS",
+  "Node.JS",
+  "OAuth 2.0",
+  "OIDC",
+  "Postman",
+  "Python",
+  "React",
+  "Redis",
+  "Ruby on Rails",
+  "SQLite",
+  "Tailwind",
+  "TDD",
+  "Typescript",
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Resume {cv}</title>
+  </head>
+  <body>
+    <main class="w-10/12 my-2 mx-auto flex flex-col items-center bg-blue-200">
+      <div class="grid grid-cols-2 gap-x-4">
+        <p class="text-end">Matias Lago Evia</p>
+        <p>New York, NY</p>
+        <a href="mailto:matiaslagoevia@gmail.com">matiaslagoevia@gmail.com</a>
+        <a
+          href="https://matiaslagoevia.com"
+          target="_blank"
+          rel="noopener noreferrer">matiaslagoevia.com</a
+        >
+      </div>
+      <div class="bg-red-200 mt-4">
+        <h2 class="font-bold text-lg text-center mb-2">Technical Skills</h2>
+        <Skills names={skills || allSkills} />
+      </div>
+    </main>
+  </body>
+</html>
+<style>
+  @media print {
+    @page {
+      size: auto;
+      margin: 0;
+    }
+  }
+</style>
