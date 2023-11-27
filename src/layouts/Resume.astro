@@ -2,14 +2,16 @@
 interface Props {
   cv?: string;
   skills: string[];
+  professionalExperiences: string[];
 }
 
-const { cv, skills } = Astro.props;
+const { cv, skills, professionalExperiences } = Astro.props;
 
 import "../reset.css";
 import "../style.css";
 
 import Skills from "../components/Skills.astro";
+import ProfessionalExperiences from "../components/ProfessionalExperiences.astro";
 ---
 
 <!doctype html>
@@ -37,6 +39,12 @@ import Skills from "../components/Skills.astro";
       <div class="mt-4">
         <h2 class="font-bold text-lg text-center mb-2">Technical Skills</h2>
         <Skills names={skills} />
+      </div>
+      <div class="mt-4">
+        <h2 class="font-bold text-lg text-center mb-2">
+          Professional Experience
+        </h2>
+        <ProfessionalExperiences names={professionalExperiences} />
       </div>
       <!-- TODO: be able to pick projects and work experience the same way? -->
       <!-- have them be list items that can be clicked, and on hover show the related tech -->
