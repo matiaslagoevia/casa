@@ -1,10 +1,10 @@
 ---
 interface Props {
-  names: SkillName[];
+  names: string[];
 }
 const { names } = Astro.props;
 
-import { SkillName, getBadgeLink } from "../data/skills";
+import { getBadgeLink } from "../data/skills";
 ---
 
 <div class="flex flex-wrap gap-2">
