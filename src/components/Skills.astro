@@ -1,26 +1,17 @@
 ---
 interface Props {
-  names: string[];
+  names: SkillName[];
 }
-
 const { names } = Astro.props;
 
-// TODO: add missing custom images
-const images = {
-  "C++": ["00599C", "FFFFFF"],
-};
-
-const image = (s: string, textColor = "222222", bgColor = "ff9900") => {
-  const name = encodeURIComponent(s);
-  return `https://img.shields.io/static/v1?style=for-the-badge&message=${name}&color=${textColor}&logo=${name}&logoColor=${bgColor}&label=`;
-};
+import { SkillName, getBadgeLink } from "../data/skills";
 ---
 
 <div class="flex flex-wrap gap-2">
   {
     names.map((n) => (
       <div class="img-wrap" data-alt={n}>
-        <img src={(images[n] && image(n, ...images[n])) || image(n)} alt={n} />
+        <img src={getBadgeLink(n)} alt={n} />
       </div>
     ))
   }

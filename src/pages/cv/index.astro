@@ -1,7 +1,15 @@
 ---
 import Resume from "../../layouts/Resume.astro";
 
-// https://www.uuidgenerator.net/, or maybe just sequential is ok
+const skills = [
+  "Javascript",
+  "Typescript",
+  "React",
+  "HTML",
+  "CSS",
+  "Node.JS",
+  "Next.js",
+].sort();
 ---
 
-<Resume />
+<Resume skills={skills} />
