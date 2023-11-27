@@ -24,7 +24,7 @@ import Skills from "../components/Skills.astro";
   </head>
   <body class="bg-gray-800 text-white flex flex-col items-center">
     <main class="w-10/12 my-2 mx-auto flex flex-col items-center grow">
-      <div class="grid grid-cols-2 gap-x-4">
+      <div class="summary grid grid-cols-2 gap-x-4">
         <p class="text-end">Matias Lago Evia</p>
         <p>New York, NY</p>
         <a href="mailto:matiaslagoevia@gmail.com">matiaslagoevia@gmail.com</a>
@@ -39,6 +39,7 @@ import Skills from "../components/Skills.astro";
         <Skills names={skills} />
       </div>
       <!-- TODO: be able to pick projects and work experience the same way? -->
+      <!-- have them be list items that can be clicked, and on hover show the related tech -->
       <div class="mt-4">
         <h2 class="font-bold text-lg text-center mb-2">Academic Experience</h2>
         <ul class="text-center">
@@ -67,6 +68,17 @@ import Skills from "../components/Skills.astro";
       @page {
         size: auto;
         margin: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .summary {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        p,
+        a {
+          text-align: center;
+        }
       }
     }
 
