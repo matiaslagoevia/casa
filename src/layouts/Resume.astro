@@ -75,10 +75,15 @@ import Skills from "../components/Skills.astro";
       .summary {
         grid-template-columns: repeat(1, minmax(0, 1fr));
 
-        p,
+        /* this may not be supported on actual mobile/iphone/etc */
+        /* p,
         a {
           text-align: center;
-        }
+        } */
+      }
+      .summary p,
+      a {
+        text-align: center;
       }
     }
 
