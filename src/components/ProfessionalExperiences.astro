@@ -9,13 +9,13 @@ const data = {
     title: "Software Engineer @ Amazon",
     from: "Dec 2021",
     to: "Apr 2023",
-    tangibles: [
+    results: [
       "95% line and 90% branch UT coverage for critical backend authentication services.",
       "Most active participant of code reviews across CLS Security SDE branch.",
       "Perform data analyses of FC devices, resulting in +34% visibility.",
       "Lead adoption of BDD w/ Cucumber, covering 100% of registration and authentication use cases.",
     ],
-    intangibles: [
+    other: [
       "Design and implement simple, extensive monitoring framework used since launch.",
       "Mentor new team members in processes such as: development, testing, oncall.",
       "Design and publish company-wide workaround for slow Cloudformation stack teardowns.",
@@ -27,15 +27,15 @@ const data = {
     title: "Software Engineer @ BlakFX",
     from: "Jul 2020",
     to: "Apr 2021",
-    tangibles: [],
-    intangibles: [],
+    results: [],
+    other: [],
   },
   solosegment: {
     title: "Software Engineer @ SoloSegment",
     from: "Jan 2021",
     to: "May 2021",
-    tangibles: [],
-    intangibles: [],
+    results: [],
+    other: [],
   },
 };
 ---
@@ -43,7 +43,7 @@ const data = {
 <div class="flex flex-col gap-2 items-center text-center">
   {
     Object.values(data).map((data) => {
-      const { title, from, to, tangibles, intangibles } = data;
+      const { title, from, to, results, other } = data;
       return (
         <>
           <h3 class="flex italic gap-4">
@@ -54,14 +54,14 @@ const data = {
           </h3>
           <div class="grid grid-cols-2 gap-2">
             <div class="tangible">
-              <h4 class="font-bold mb-2">Tangibles</h4>
-              {tangibles.map((e) => (
+              <h4 class="font-bold mb-2">Results</h4>
+              {results.map((e) => (
                 <p class="mb-1">{e}</p>
               ))}
             </div>
             <div class="intangible">
-              <h4 class="font-bold mb-2">Intangibles</h4>
-              {intangibles.map((e) => (
+              <h4 class="font-bold mb-2">Other</h4>
+              {other.map((e) => (
                 <p class="mb-1">{e}</p>
               ))}
             </div>
