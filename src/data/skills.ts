@@ -12,6 +12,7 @@ const defaultBadgeInfo: BadgeInfo = {
 const customBadgeInfo: Record<string, BadgeInfo> = {
   HTML: { ...defaultBadgeInfo, logo: "HTML5" },
   CSS: { ...defaultBadgeInfo, logo: "CSS3" },
+  AWS: { ...defaultBadgeInfo, logo: "Amazon AWS" },
 };
 
 export function getBadgeLink(name: string) {

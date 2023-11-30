@@ -4,46 +4,13 @@ interface Props {
 }
 const { names } = Astro.props;
 
-const data = {
-  amazon: {
-    title: "Software Engineer @ Amazon",
-    from: "Dec 2021",
-    to: "Apr 2023",
-    results: [
-      "95% line and 90% branch UT coverage for critical backend authentication services.",
-      "Most active participant of code reviews across CLS Security SDE branch.",
-      "Perform data analyses of FC devices, resulting in +34% visibility.",
-      "Lead adoption of BDD w/ Cucumber, covering 100% of registration and authentication use cases.",
-    ],
-    other: [
-      "Design and implement simple, extensive monitoring framework used since launch.",
-      "Mentor new team members in processes such as: development, testing, oncall.",
-      "Design and publish company-wide workaround for slow Cloudformation stack teardowns.",
-      "Maintain existing Ruby on Rails authentication service shortly after onboarding.",
-      "Participate in design, implementation, and troubleshooting of new Java authentication service from planning to prod launch and beyond.",
-    ],
-  },
-  blakfx: {
-    title: "Software Engineer @ BlakFX",
-    from: "Jul 2020",
-    to: "Apr 2021",
-    results: [],
-    other: [],
-  },
-  solosegment: {
-    title: "Software Engineer @ SoloSegment",
-    from: "Jan 2021",
-    to: "May 2021",
-    results: [],
-    other: [],
-  },
-};
+import { getExperienceData } from "../data/professional";
 ---
 
 <div class="flex flex-col gap-2 items-center text-center">
   {
-    Object.values(data).map((data) => {
-      const { title, from, to, results, other } = data;
+    names.map((n) => {
+      const { title, from, to, results, other } = getExperienceData(n);
       return (
         <>
           <h3 class="flex italic gap-4">
@@ -53,13 +20,13 @@ const data = {
             </span>
           </h3>
           <div class="grid grid-cols-2 gap-2">
-            <div class="tangible">
+            <div class="results">
               <h4 class="font-bold mb-2">Results</h4>
               {results.map((e) => (
                 <p class="mb-1">{e}</p>
               ))}
             </div>
-            <div class="intangible">
+            <div class="other">
               <h4 class="font-bold mb-2">Other</h4>
               {other.map((e) => (
                 <p class="mb-1">{e}</p>
