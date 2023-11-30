@@ -44,7 +44,7 @@ const data = {
     to: "May 2021",
     results: ["Organize end of project presentation to stakeholders."],
     other: [
-      "Led student intership cross-team effort to deploy and document data pipeline in cloud w/ Microservice architecture.",
+      "Lead student intership cross-team effort to deploy and document data pipeline in cloud w/ Microservice architecture.",
     ],
   },
 } as { [key: string]: ExperienceData };
