@@ -13,6 +13,8 @@ const customBadgeInfo: Record<string, BadgeInfo> = {
   HTML: { ...defaultBadgeInfo, logo: "HTML5" },
   CSS: { ...defaultBadgeInfo, logo: "CSS3" },
   AWS: { ...defaultBadgeInfo, logo: "Amazon AWS" },
+  "Google Cloud Platform": { ...defaultBadgeInfo, logo: "Google Cloud" },
+  JUnit: { ...defaultBadgeInfo, logo: "JUnit5" },
 };
 
 export function getBadgeLink(name: string) {
