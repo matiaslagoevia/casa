@@ -63,7 +63,7 @@ import ProfessionalExperiences from "../components/ProfessionalExperiences.astro
         </ul>
       </div>
     </main>
-    <footer>
+    <footer class="invisible">
       <p>
         Generated from <a href={`https://matiaslagoevia.com/cv`}
           >https://matiaslagoevia.com/cv</a
@@ -76,6 +76,10 @@ import ProfessionalExperiences from "../components/ProfessionalExperiences.astro
       @page {
         size: auto;
         margin: 0;
+      }
+
+      footer {
+        visibility: visible;
       }
     }
 
