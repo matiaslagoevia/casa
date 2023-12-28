@@ -3,28 +3,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome | Matias Lago Evia">
-  <main class="container text-center">
-    <div class="intro mb-10">
-      <h1 class="text-2xl font-bold">
+  <main class="mx-4 my-8 text-center">
+    <section>
+      <h2 class="text-2xl font-bold">
         I'm <a
           href="https://www.linkedin.com/in/matias-engineer/"
           class="text-turquoise-blue underline">Matias Lago Evia</a
         >, nice to meet you! 👋
-      </h1>
-      <h2 class="text-xl">
-        I'm a professional software developer based in Manhattan.
       </h2>
-      <h3 class="text-large">
+      <p>I'm a professional software developer based in Manhattan.</p>
+      <p>
         If you'd like to consider me for a role, <a
           href="https://matiaslagoevia.com/cv"
-          class="text-hot-pink underline">here's my resume</a
+          class="text-turquoise-blue underline">here's my resume</a
         >!
-      </h3>
-    </div>
-    <div class="career mb-5">
+      </p>
+    </section>
+
+    <section>
       <h2 class="text-xl">My career (summarized) so far...</h2>
-      <p>I am grateful to work doing what I love for a living!</p>
-      <ul class="list-disc list-inside mt-3">
+      <ul class="list-none list-inside mt-3">
         <li>
           At <a href="https://amazon.com" class="text-coral-orange">Amazon</a>,
           I specialized in FC associates' authentication and authorization use
@@ -41,47 +39,51 @@ import Layout from "../layouts/Layout.astro";
           components.
         </li>
         <li>
-          At <a href="https://honors.njit.edu/" class="text-hot-pink"
+          At <a href="https://honors.njit.edu/" class="text-coral-orange"
             >NJIT's ADHC</a
           >, I received my B.S. in Computer Science.
         </li>
         <li>
-          At <a href="https://www.ccm.edu/" class="text-hot-pink">CCM</a>, I
+          At <a href="https://www.ccm.edu/" class="text-coral-orange">CCM</a>, I
           received my A.S. in Mathematics and my A.A.S. in Game Development.
         </li>
       </ul>
-    </div>
-    <div class="extra mb-5">
+    </section>
+
+    <section>
       <h2 class="text-xl">Before you go...</h2>
-      <p>You may want to consider some of these!</p>
-      <ul class="list-disc list-inside mt-3">
+      <ul class="list-none list-inside mt-3">
         <li>
           You can code with me on <a
             href="https://github.com/matiaslagoevia"
             class="text-lavender"
-            >Github
+            >Github.
           </a>
         </li>
         <li>
           You can practice with me on <a
             href="https://leetcode.com/shrampoo/"
             class="text-lavender"
-            >Leetcode
+            >Leetcode.
           </a>
         </li>
         <li>
           You can grow with me on <a
             href="https://www.frontendmentor.io/profile/matiaslagoevia"
             class="text-lavender"
-            >Frontend Mentor
+            >Frontend Mentor.
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   </main>
+  <style>
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+  </style>
 </Layout>
-<style>
-  a {
-    font-weight: 900;
-  }
-</style>
