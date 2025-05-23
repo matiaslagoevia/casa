@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectTable from "../components/ProjectTable.astro";
+
+const projectTypes = ["Personal", "Courses", "Frontend Mentor Challenges"];
+---
+
+<Layout title="Welcome | Matias Lago Evia">
+	<main class="mx-4 my-8 text-center">
+		<h2 class="text-xl my-8">My projects so far...</h2>
+		<!-- TODO: update this to be nicer with pictures/links/etc -->
+		<div class="flex flex-col gap-4">
+			{projectTypes.map((type) => <ProjectTable title={type} />)}
+		</div>
+	</main>
+</Layout>

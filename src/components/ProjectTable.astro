@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+import { getProjectData } from "../data/projects";
+
+const data = getProjectData(title);
+---
+
+<h3>{title}</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      data.map((project) => (
+        <tr>
+          <td>
+            <a href={project.url} target="_blank">
+              {project.name}
+            </a>
+          </td>
+          <td>{project.notes}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
+<style>
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
